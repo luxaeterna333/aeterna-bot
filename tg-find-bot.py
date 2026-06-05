@@ -9,7 +9,7 @@ API_ID = int(os.environ.get("TG_API_ID", "0"))
 API_HASH = os.environ.get("TG_API_HASH", "")
 with open('telethon_session.txt', encoding='utf-8') as f:
     SESSION = f.read().strip()
-PROXY = ('127.0.0.1', 8443, 'edb5df56a21363fcba9b005f0abc006f')
+PROXY = ('127.0.0.1', 8443, os.environ.get("TG_PROXY_SECRET",""))
 
 async def main():
     client = TelegramClient(StringSession(SESSION), API_ID, API_HASH,

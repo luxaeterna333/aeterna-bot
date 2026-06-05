@@ -20,7 +20,7 @@ SESSION_FILE = os.path.join(os.path.dirname(__file__), 'telethon_session.txt')
 SESSION = open(SESSION_FILE, encoding='utf-8').read().strip()
 API_ID = int(os.environ.get("TG_API_ID", "0"))
 API_HASH = os.environ.get("TG_API_HASH", "")
-PROXY = ('127.0.0.1', 8443, 'edb5df56a21363fcba9b005f0abc006f')
+PROXY = ('127.0.0.1', 8443, os.environ.get("TG_PROXY_SECRET",""))
 NODE_PORT = 3001
 
 def send_to_node(data):

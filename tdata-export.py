@@ -9,7 +9,7 @@ from telethon.sessions import StringSession
 from PyQt5.QtCore import QByteArray
 
 TDATA = r'C:\Users\lux aeterna\Desktop\Projects\aeterna-bot\tdata_copy'
-PROXY = ('mtproxy', '127.0.0.1', 8443, 'edb5df56a21363fcba9b005f0abc006f')
+PROXY = ('mtproxy', '127.0.0.1', 8443, os.environ.get("TG_PROXY_SECRET",""))
 
 async def main():
     tdesk = TDesktop()
